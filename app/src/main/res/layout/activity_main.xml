@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2ede9"
+    tools:context="com.autokey.aok_vin.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="362dp"
+        android:layout_height="154dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/autokey_big"
+        tools:layout_editor_absoluteY="341dp"
+        app:layout_constraintHorizontal_bias="0.51"/>
+
+    <EditText
+        android:id="@+id/txtOperator"
+        android:layout_width="132dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/strOperator"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/lblWifiConnName"/>
+
+    <EditText
+        android:id="@+id/txtVinBarcode"
+        android:layout_width="243dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/strVINBarcode"
+        android:inputType="textPersonName"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtOperator"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/txtModel"
+        android:layout_width="74dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/ModelTest"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/lbl"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/txtVIN"
+        android:layout_width="159dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/VinTest"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/lbl"
+        app:layout_constraintLeft_toRightOf="@+id/txtModel"
+        android:layout_marginLeft="11dp"/>
+
+    <TextView
+        android:id="@+id/lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Model / VIN"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVinBarcode" />
+
+    <Button
+        android:id="@+id/cmdInsert"
+        android:layout_width="86dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:text="@string/cmdInsert"
+        android:layout_marginTop="33dp"
+        app:layout_constraintTop_toBottomOf="@+id/cmdScanVIN"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/lblWifiConnName"
+        android:layout_width="187dp"
+        android:layout_height="42dp"
+        android:lines="2"
+        android:maxLines="2"
+        android:minLines="2"
+        android:text="@string/Undef"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/lblWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="@string/lblWifi"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="342dp"
+        android:layout_height="69dp"
+        android:lines="2"
+        android:minLines="2"
+        android:text="@string/Undef"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        tools:maxLines="2"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="41dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtVIN"/>
+
+    <Button
+        android:id="@+id/cmdScanOperator"
+        android:layout_width="86dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:onClick="scanOperator"
+        android:text="@string/cmdScanOperator"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblWifiConnName"/>
+
+    <Button
+        android:id="@+id/cmdScanVIN"
+        android:layout_width="86dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        android:onClick="scanVIN"
+        android:text="@string/cmdScanOperator"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cmdScanOperator"/>
+
+</android.support.constraint.ConstraintLayout>

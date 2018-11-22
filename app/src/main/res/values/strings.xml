@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Autokey VIN Assigner</string>
+    <string name="strOperator">Operator</string>
+    <string name="strVINBarcode">Insert VIN</string>
+    <string name="cmdScanOperator">Scan</string>
+    <string name="cmdInsert">Insert</string>
+    <string name="lblWifi">Wifi connection status :</string>
+    <string name="Undef">...</string>
+    <!--<string name="VinTest">6A08260</string>-->
+    <!--<string name="ModelTest">300</string>-->
+    <string name="VinTest"></string>
+    <string name="ModelTest"></string>
+
+</resources>
+
